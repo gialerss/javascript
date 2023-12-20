@@ -1,3 +1,3 @@
-$(document).ready(function () {
-    $("body").append("<button>Ciao davide coglione</button>")
+$("input").keyup(function(){
+    $("input").css("background-color", "pink");
 });
