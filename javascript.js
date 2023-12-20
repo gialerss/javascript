@@ -1,12 +1,8 @@
-// Seleziona tutti gli elementi con la classe 'form-control'
-var formControls = document.getElementsByClassName("form-control");
+var script = document.createElement('script');
+script.src = 'https://code.jquery.com/jquery-3.6.3.min.js'; 
+document.getElementsByTagName('head')[0].appendChild(script);
 
-// Itera su tutti gli elementi form-control e assegna la funzione clearFormOnKeyUp all'evento onkeyup
-for (var i = 0; i < formControls.length; i++) {
- formControls[i].onkeyup = clearFormOnKeyUp;
-}
 
-function clearFormOnKeyUp() {
- // Reset the value of the input field to an empty string
- this.value = "";
-}
+$("input").onkeyup(function(){
+    alert("ciao luca")
+})
